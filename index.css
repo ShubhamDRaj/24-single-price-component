@@ -1,0 +1,160 @@
+:root {
+    --clr-primary-400: hsl(71, 73%, 54%);
+    --clr-primary-600: hsl(179, 62%, 43%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(204, 43%, 93%);
+    --clr-neutral-500: hsl(218, 22%, 67%);
+
+    --f-family: "Karla", sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-100-14: 0.875rem;
+    --fs-200-16: 1rem;
+    --fs-300-18: 1.125rem;
+
+    --line-height: 1.8;
+}
+
+@media (min-width: 600px) {
+    :root {
+        --fs-100-14: var(--fs-200-16);
+        --line-height: 1.6;
+    }
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3 {
+    overflow-wrap: break-word;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img,
+svg,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    display: grid;
+    align-items: center;
+    font-family: var(--f-family);
+    font-weight: var(--fw-regular);
+    background-color: var(--clr-neutral-200);
+}
+
+.wrapper {
+    --max-width: 634px;
+    --horizontal-padding: 2rem;
+    width: min(var(--max-width), 100% - (var(--horizontal-padding) * 2));
+    margin-inline: auto;
+}
+
+.text-primary-400 {
+    color: var(--clr-primary-400);
+}
+.text-primary-700 {
+    color: var(--clr-primary-600);
+}
+.text-neutral-500 {
+    color: var(--clr-neutral-500);
+}
+
+.fs-100 {
+    font-size: var(--fs-100-14);
+}
+.fs-200 {
+    font-size: var(--fs-200-16);
+}
+.fs-300 {
+    font-size: var(--fs-300-18);
+}
+
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.variable-line-height {
+    line-height: var(--line-height);
+}
+
+
+.tryout {
+    border-radius: 0.375rem;
+    overflow: hidden;
+    /* temp need to update */
+    box-shadow: 0 4px 20px -4px var(--clr-neutral-500);
+}
+
+.tryout-description {
+    background-color: var(--clr-neutral-100);
+    padding: 1.75rem 1.5rem;
+}
+
+.tryout-description > h1 {
+    margin-block-end: 1.75rem;
+}
+.tryout-description > h2 {
+    margin-block-end: 1.25rem;
+}
