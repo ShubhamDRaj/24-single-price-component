@@ -242,6 +242,7 @@ body {
 
 @media (min-width: 600px) {
     .grid-flow {
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
             'description description'
             'subscription whyus';
